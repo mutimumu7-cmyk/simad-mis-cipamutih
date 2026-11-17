@@ -1,0 +1,37 @@
+SIMAD MIS CIPAMUTIH - VERSI QR
+
+ISI PAKET:
+- index.html: aplikasi utama
+- manifest.webmanifest: metadata aplikasi web
+- sw.js: cache dasar aplikasi
+
+CARA MENJALANKAN:
+1. Ekstrak ZIP.
+2. Upload seluruh isi folder ke satu repository GitHub (jangan hanya index.html).
+3. Buka Settings > Pages pada repository.
+4. Pilih Deploy from a branch, branch main, folder /root, lalu Save.
+5. Tunggu GitHub Pages menerbitkan alamat HTTPS.
+6. Buka alamat HTTPS tersebut di HP guru menggunakan Chrome.
+7. Izinkan akses kamera saat menu Scan QR dibuka.
+
+CARA PAKAI:
+1. Buat data kelas.
+2. Tambahkan siswa satu per satu, atau impor CSV dengan kolom:
+   NISN,Nama,JK,Kelas,TanggalLahir,Status
+   Contoh:
+   1234567890,"Siswa Contoh",L,I,2018-02-01,Aktif
+3. Tambahkan data guru.
+4. Buka Cetak Kartu QR > pilih Siswa/Guru > Buat QR Code > Cetak kartu.
+5. Pada HP guru, buka aplikasi yang sama dan masukkan database yang sama.
+6. Buka Scan QR > Aktifkan kamera > pindai QR kartu siswa/guru.
+7. Periksa Riwayat Absensi dan ekspor CSV.
+
+PENTING:
+- QR hanya menyimpan kode unik acak, bukan NISN atau data pribadi.
+- QR harus berasal dari database yang sama dengan aplikasi scanner.
+- Kamera browser memerlukan HTTPS atau localhost. File yang dibuka langsung (file://) tidak dapat meminta kamera di banyak browser.
+- Aplikasi ini menyimpan data pada localStorage browser/perangkat. Data tidak otomatis tersinkron antara HP guru dan komputer operator.
+- Untuk penggunaan multi-perangkat secara bersamaan diperlukan backend/database online dan autentikasi. Jangan anggap versi lokal ini sebagai sistem absensi terpusat.
+- Pustaka QR generator dan scanner dimuat dari CDN, sehingga koneksi internet diperlukan untuk fitur QR ketika pustaka belum tersedia/cache.
+- Backup JSON secara rutin. Jangan membagikan file cadangan atau database siswa secara publik.
+- Ini aplikasi administrasi mandiri, bukan pengganti EMIS/RDM atau sistem resmi Kementerian Agama.

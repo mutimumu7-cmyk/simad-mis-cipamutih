@@ -1,0 +1,9 @@
+{
+  "name": "SIMAD MIS Cipamutih",
+  "short_name": "SIMAD MIS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#17365d",
+  "icons": []
+}
